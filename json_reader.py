@@ -4,7 +4,7 @@ import random
 class Json_reader():
  
     def __init__(self):
-        self.json_file = "teste/messagens.json"
+        self.json_file = "messagens.json"
 
     def _reader(self):
         with open(self.json_file, "r") as file:
