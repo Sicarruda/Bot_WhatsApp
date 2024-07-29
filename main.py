@@ -1,5 +1,5 @@
+from user_scheduler import User_scheduler
 
 
 if __name__ == "__main__":
-    # Make a game intance, and run the game.
-    pass    
+    user_scheduler = User_scheduler()
