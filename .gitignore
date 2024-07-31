@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 PyWhatKit_DB.txt
 .my_venv
+.txt
 
 # C extensions
 *.so
