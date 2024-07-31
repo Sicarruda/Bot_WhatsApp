@@ -13,10 +13,12 @@ class Send_msg:
         self.phone_number = number
 
     def _send_whatsapp_message(self, hour, minute):
-        kit.sendwhatmsg(self.phone_number, self.msg, hour, (minute + 1))
-        time.sleep(1)
+        # kit.sendwhatmsg(self.phone_number, self.msg, hour, (minute + 1))
+        print(self.msg, hour, minute)
         pyautogui.press("enter")
+        time.sleep(2)
         self._close_whatsapp()
 
     def _close_whatsapp(self):
-        pass
+        pyautogui.hotkey('alt', 'f4')
+        

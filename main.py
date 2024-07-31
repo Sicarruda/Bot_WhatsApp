@@ -1,4 +1,3 @@
-import time
 from user_scheduler import User_scheduler
 
 
