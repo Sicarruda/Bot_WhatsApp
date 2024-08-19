@@ -4,6 +4,7 @@ from send_msg import Send_msg
 
 
 class User_scheduler:
+    # Agenda horario de envio de mensagens pelo WhatsApp 
 
     def __init__(self):
         self.number = input(
@@ -18,6 +19,7 @@ class User_scheduler:
         self.send_msg = Send_msg(self.number)
 
     def _add_new_schedule(self):
+        # Adiciona horarios para envio de mensagens
 
         while self.quit == False:
             schedule_time = input(
@@ -33,8 +35,11 @@ class User_scheduler:
                 self.array_schedule.append(schedule_time)
 
     def _normalize_schedule_array(self):
+        # Padroniza os horarios 
+ 
         new_array = []
         array_without_h = []
+        len_time = 4
 
         if self.array_schedule:
             for time in self.array_schedule:
@@ -46,12 +51,13 @@ class User_scheduler:
                     array_without_h.append(time.replace("H", ""))
 
             for time in array_without_h:
-                if len(time) == 4:
+                if len(time) == len_time:
                     new_array.append((time[:2], time[2:]))
 
             self.normalize_schedule = new_array
 
     def schedule_message(self):
+        # Verifica horario de envio de mensagens   
 
         date = datetime.datetime.now()
         date_hour = date.hour
